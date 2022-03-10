@@ -8,8 +8,8 @@
     "e2e:run": "concurrently -k -s first \"npm start\" \"cypress run\"",
     "format:check": "prettier -c .",
     "format:fix": "prettier -w .",
-    "lint:check": "eslint ./src && stylelint **/*.scss",
-    "lint:fix": "eslint ./src --fix && stylelint **/*.scss --fix",
+    "lint:check": "eslint ./src && stylelint **/*.scss && markdownlint .",
+    "lint:fix": "eslint ./src --fix && stylelint **/*.scss --fix  && markdownlint . --fix",
     "prepare": "husky install",
     "preview": "vite preview",
     "sanity-check": "npm run lint:check && npm run format:check && npm test && npm run e2e:run",
@@ -46,6 +46,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.5",
+    "markdownlint": "^0.25.1",
+    "markdownlint-cli": "^0.31.1",
     "prettier": "2.5.1",
     "sass": "^1.49.9",
     "stylelint": "^14.5.3",
@@ -57,6 +59,7 @@
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache --fix",
     "*.{css,scss}": "stylelint --fix",
-    "*.{js,ts,tsx,css,scss,md,json}": "prettier --write"
+    "*.{js,ts,tsx,css,scss,md,json}": "prettier --write",
+    "*.md": "markdownlint --fix"
   }
 }
