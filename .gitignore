@@ -1,7 +1,5 @@
 node_modules/
-
 .eslintcache
-
+coverage/
 dist/
-
 cypress/videos

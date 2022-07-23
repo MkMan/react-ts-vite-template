@@ -8,7 +8,7 @@ This is a Github template repository that uses the following technologies.
 
 ## Testing
 
-- Jest
+- Vitest
 - Cypress
 
 ## Code Quality
@@ -25,4 +25,3 @@ All the tools in this category run on commit against staged files using `lint-st
 
 - Vite
 - TypeScript
-- Babel (only used for Jest, should remove once a better way is available)
