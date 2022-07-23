@@ -13,7 +13,7 @@
     "prepare": "husky install",
     "preview": "vite preview",
     "sanity-check": "npm run lint:check && npm run format:check && npm test && npm run e2e:run",
-    "start": "vite",
+    "start": "vite --port 3000",
     "test:watch": "jest --watch",
     "test": "jest"
   },
@@ -34,7 +34,7 @@
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
-    "@vitejs/plugin-react": "^1.0.7",
+    "@vitejs/plugin-react": "^2.0.0",
     "babel-jest": "^27.5.1",
     "concurrently": "^7.0.0",
     "cypress": "^9.5.1",
@@ -54,8 +54,8 @@
     "stylelint": "^14.5.3",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^3.0.0",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0"
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache --fix",
